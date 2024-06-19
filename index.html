@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Web Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="welcome-screen">
+            <h1>Welcome to TechQuizzer</h1>
+            <h2>Enhance your Full-Stack Development Skills!</h2>
+            <h3>"DISCRIPTION"</h3>
+            <p><STRONG>"TechQuizzer is a comprehensive quiz platform designed to test and hone Full-Stack development skills. With a diverse range of questions and challenges, it evaluates proficiency in HTML, CSS, JavaScript, React.JS, Node.JS and Express.js. By competing with others and tracking progress, users can enhance their coding abilities and become a master of full stack development."</STRONG></p>
+            <button onclick="showLanguageOptions()">Click Here To Start Now!</button>
+        </div>
+        
+        <div id="language-options" class="hidden">
+            <h1>TechQuizzer</h1>
+            <h2>Enhance your Full-Stack Development Skills!</h2>
+            <h1>Select A Programming Language</h1>
+            <button onclick="startQuiz('HTML')">HTML</button>
+            <button onclick="startQuiz('CSS')">CSS</button>
+            <button onclick="startQuiz('JavaScript')">JavaScript</button>
+            <br>
+            <button onclick="startQuiz('ReactJS')">React.JS</button>
+            <button onclick="startQuiz('NodeJS')">Node.JS</button>
+            <button onclick="startQuiz('ExpressJS')">Express.JS</button>
+            <!-- <button onclick="startQuiz('MongoDB')">MongoDB</button> -->
+        </div>
+        
+        <div id="quiz-container" class="hidden">
+            <h2 id="quiz-title"></h2>
+            <div id="question-container"></div>
+            <div id="navigation-buttons">
+                <button id="prev-btn" onclick="prevQuestion()">Previous</button>
+                <button id="next-btn" onclick="nextQuestion()">Next</button>
+                <button id="submit-btn" class="hidden" onclick="submitQuiz()">Submit Now!</button>
+            </div>
+        </div>
+        
+        <div id="result-screen" class="hidden">
+            <h2 id="result-message"></h2>
+            <p id="score"></p>
+            <button onclick="location.reload()">Try Again</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
